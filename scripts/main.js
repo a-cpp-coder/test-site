@@ -36,32 +36,44 @@ myImage.onclick = () => {   // excute the callback "lambda" function
 let myButton = document.querySelector("button");
 let myHeading = document.querySelector("h1");
 
-// personalized greeting
-// function setUserName() {
-//     const myName = prompt("Please enter your name.");
-//     if (!myName) {   //  if myName is null or empty string ""
-//         setUserName();// run setUserName() again from the  start, kind of recursion but, yeah, kind of expensive here, may do while better  
-//     } else {
-//         localStorage.setItem("name", myName);  // Web API storage: local and session
-//         myHeading.textContent = `This is personal, ${myName}`;
-//     }
-// }
+// // personalized greeting
+function setUserName() {
+    const myName = prompt("Please enter your name: test");
+    if (!myName) {   //  if myName is null or empty string ""
+        setUserName();// run setUserName() again from the  start, kind of recursion but, yeah, kind of expensive here, may do while better  
+    } else {
+        localStorage.setItem("name", myName);  // Web API storage: local and session
+        myHeading.textContent = `This is personal, ${myName}`;
+    }
+}
 
 // do-while
 
  // need to initialize the var 1st
 //  let myName;
-function setUserName() {
-    // alert("test");
-    // let myName;
-    do {
-        // alert("test");
-        let myName = prompt("Please enter your name.");
-    } while(!myName)
+// function setUserName() {
+//     // alert("test");
+//     // let myName;
+//     do {
+//         // alert("test");
+//         let myName = prompt("Please enter your name.");
+//     } while(!myName)    // not work because the while does not see myName
 
-    localStorage.setItem("name", myName);  // Web API storage: local and session
-    myHeading.textContent = `This is personal, ${myName}`;
-}
+//     localStorage.setItem("name", myName);  // Web API storage: local and session
+//     myHeading.textContent = `This is personal, ${myName}`;
+// }
+// var myName;
+// function setUserName() {
+//     // alert("test");
+    
+//     do {
+//         // alert("test");
+//         let myName = prompt("Please enter your name.");
+//     } while(!myName)    
+
+//     localStorage.setItem("name", myName);  // Web API storage: local and session
+//     myHeading.textContent = `This is personal, ${myName}`;
+// }
 
 if(!localStorage.getItem("name")) {
     setUserName();
