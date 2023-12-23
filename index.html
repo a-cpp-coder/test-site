@@ -1,0 +1,55 @@
+<!DOCTYPE html>  <!-- required preamble, set of rules for a good HTML, make sure your HTML file behaves correctly-->
+<html lang="en-US">  <!-- html element wraps all the content on the entire page, a.k.a "root element" (With lang attribute - primary language)--> 
+    <head>  <!---the element act as a Container for all the stuff you want to include on the HTML page that isn't the content you are showing to your page's viewer
+        - keywords (to describe the page's content for search engine)
+        - page descrption (that you want to appear in search result)
+        - CSS to style your content
+        - character set declaration 
+        so on
+    -->
+        <meta charset="utf-8" /> <!---This element define the character set of you document, should set -->
+        <meta name = "viewport" content="width = device-width"/>  <!--- viewport element ensure the page renders at the width of viewport, preventing mobile browsers from rendering pages wider than the view port and then shrinking them down
+        -->
+        <title> My Web Page </title>    <!-- the <title> element - set the tiltle of your page (appearing in the the browser tab/bookmark name)-->
+
+        <!--Applying CSS to HTML-->
+        <link href="styles/style.css" rel="stylesheet" />
+        
+        <!--Google Font-->
+        <link href="https://fonts.googleapis.com/css?family=Tangerine"
+              rel="stylesheet">
+    </head>
+    <body>  <!-- The <body> element contains all the content that you want to show: text, images, videos, games, audio, whatever,...-->
+        <h1>A cat</h1>
+        <h1>A dog</h1>
+        <p>My cat sat on the mat</p>
+        <p class="editor-note">My cat sat on the mat</p>
+        <p>My cat is <strong>very</strong> grumpy.</p>
+        <p>My cat is <strong>very grumpy.</p> </strong>
+        <img src="images/mpv-shot0001.jpg" alt="Jumping Rope to Increase Lung Capacity to Speak louder" />
+                                           <!---Descriptive test for users who cannot see the image: impaired or wrong source ---> 
+        <p>
+            At Mozilla, we are a global community of:
+
+            <ul>
+                <li>technologists</li>
+                <li>thinkers</li>
+                <li>builders</li>
+            </ul>
+            <ol>
+                <li>technologists</li>
+                <li>thinkers</li>
+                <li>builders</li>
+            </ol>
+            working together.
+        </p> 
+        <a href="google.com"> a link</a> 
+        <p><a href="https://google.com"> a link 2</a> </p>        <!-- need https -->                      
+        
+        <!--Adding JS scripts(logic/app)-->
+        <!-- <script> src="scripts/main.js"</script> -->    <!--src is a atrb not a content => wrong code-->
+
+        <button>Change user</button>
+        <script src="scripts/main.js"></script>
+    </body>
+</html>
